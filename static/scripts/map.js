@@ -9,20 +9,51 @@ function openSpCard(index) {
 	closeSpCards();
 	let card = document.getElementById(`sp-card-${index}`);
 	let card_body = document.getElementById(`sp-card-${index}-title`);
-	
-	
 	card.classList.remove('d-none');
 }
 
 
 function openAnalyticsCard() {
-	let card = document.getElementById('analytics-card');
+	closeSpCards();
+	let card = document.getElementById('analytics-wrapper');
+	let a_btn = document.getElementById('analytics-button');
+	a_btn.classList.add('d-none');
 	card.classList.remove('d-none');
 }
 
 function closeAnalyticsCard() {
-	let card = document.getElementById('analytics-card');
+	let card = document.getElementById('analytics-wrapper');
+	let a_btn = document.getElementById('analytics-button');
+	a_btn.classList.remove('d-none');
 	card.classList.add('d-none');
+}
+
+
+function openAnalyticsImage(index) {
+	let card = document.getElementById('analytics-card');
+	let close_btn = document.getElementById('close-analytics');
+	let image = document.getElementById('analytics-image');
+	close_btn.onclick = () => { closeAnalyticsImage(); };
+	let img_inner = document.createElement('img');
+	let txt_inner = document.createElement('h2');
+	txt_inner.innerHTML = `Аналитика ${index} <br> Еще строчка`;
+	img_inner.setAttribute('src', `static/images/Analytics/${index}.png`);
+	img_inner.classList.add('img-fluid');
+	img_inner.classList.add('mt-5');
+	image.appendChild(txt_inner);
+	image.appendChild(img_inner);
+	image.classList.remove('d-none');
+	card.classList.add('d-none');
+}
+
+function closeAnalyticsImage() {
+	let card = document.getElementById('analytics-card');
+	let close_btn = document.getElementById('close-analytics');
+	let image = document.getElementById('analytics-image');
+	close_btn.onclick = () => { closeAnalyticsCard(); };
+	image.innerHTML = '';
+	image.classList.add('d-none');
+	card.classList.remove('d-none');
 }
 
 

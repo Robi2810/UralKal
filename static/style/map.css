@@ -30,12 +30,7 @@
 	top: 188px;
 	width: 22%;
 	height: 22%;
-	padding:  1px;
-	font-size: 1rem;
-}
-
-#analytics-button p {
-	margin: 0;
+	padding: 1px;
 }
 
 
@@ -47,15 +42,52 @@
 #analytics-card {
 	position: absolute;
 	left: 50%;
-	top: 17%;
+	top: 14%;
     transform: translate(-50%, 0);
-    width: 75%;
-    height: 70%;
+    width: 80%;
     background: white;
-    border: 1px solid gray;
+    border: 3px solid #114499;
     border-radius: 10px;
     z-index: 1000;
 }
+
+#analytics-wrapper {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#analytics-wrapper button {
+	position: fixed;
+	bottom: 30px;
+	right: 2%;
+}
+
+.analytics-data {
+	margin-bottom: .5rem;
+}
+
+.analytics-data img{
+	border: 3px solid #114499;
+	height: 100%;
+	border-radius: 10px;
+}
+
+#analytics-image {
+	position: absolute;
+	left: 50%;
+	top: 14%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    background: white;
+    border: 3px solid #114499;
+    border-radius: 10px;
+    padding: 2px;
+    z-index: 1000;
+}
+
 
 .sp-image {
 	max-width: 250px;
@@ -71,9 +103,7 @@
 	margin-left: 60px;
 	margin-right: 60px;
 	margin-top: 28px;
-	
 }
-
 
 #header-row h2 {
 	font-weight: 550;
