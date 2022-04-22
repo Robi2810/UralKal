@@ -1,9 +1,7 @@
 from flask import *
-import colorama
 import random
 
 
-colorama.init()
 app = Flask(__name__)
 
 
