@@ -55,4 +55,4 @@ def object(sector, sp_number, obj_number):
 	return render_template('object-page.html', sp = sp_number, obj = obj_number)
 
 if __name__ == '__main__':
-	app.run(host = '0.0.0.0', debug = True)
+	app.run(host = '0.0.0.0', port=5678, debug = True)
