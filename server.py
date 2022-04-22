@@ -1,4 +1,5 @@
 from flask import *
+import jinja2.ext
 import random
 
 
