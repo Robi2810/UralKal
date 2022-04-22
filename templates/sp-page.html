@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap-5.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/style/sp.css">
+	<title>TEST</title>
+</head>
+<body>
+   <div class="row mt-4 mx-5 ">
+      <div class="col-2 ps-0 text-start">
+         <img style="max-height: 80px;" class="img-fluid" src="/static/icons/logo1.svg">
+      </div>
+      <div class="col-8 text-center">
+         <h2>Структурное <br> подразделение {{sp_number}}</h2>
+      </div>
+      <div class="col-2 pe-0 text-end">
+         <img  class="img-fluid" src="/static/icons/logo2.svg">
+      </div>
+   </div>
+   <div class="main-wrapper">
+      <div class="main">
+         <div class="row pt-5">
+            <div class="col-6 col-md-8">
+               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 row-7-el">
+               {% for elem in table_data.keys() %}
+                  <div class="element">
+                     <div class="object-card">
+                        <a href="/sector/{{sector}}/sp/{{sp_number}}/object/{{elem}}">
+                           <img class="img-fluid" src="/static/images/Solikamsk/sp-1.png">
+                           <div class="centered-text fw">{{elem}}</div>
+                        </a>
+                     </div>
+                  </div>
+               {% endfor %}
+               </div>
+            </div>
+            <div class="col-5 col-md-3 d-flex justify-content-center">
+               <div class="table-holder w-75 text-center ms-2">
+                  <table id="data-table" class="table table-borderless" >
+                  <thead>
+                     <th scope="col"></th>
+                     <th scope="col" class="h6">Название</th>
+                     <th scope="col" class="h6">Площадь объекта</th>
+                  </thead>
+                  <tbody>
+                  {% for tr in table_data.keys() %}
+                     <tr>
+                        <th scope="row">{{tr}}</th>
+                        <td class="fw-bold">{{table_data[tr][0]}}</td>
+                        <td class="fw-bold">{{table_data[tr][1]}}</td>
+                     </tr>
+                  {% endfor %}
+                  </tbody>
+               </table>    
+               </div>
+            </div>
+            <div class="col-1 d-flex flex-column justify-content-end">
+               <a class="btn" href="/?block={{sector}}">
+                  <img src="/static/icons/arrow_back.svg">
+               </a>
+            </div>
+            
+         </div>
+   </div>
+   </div>
+   
+   <script type="text/javascript" src="/static/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

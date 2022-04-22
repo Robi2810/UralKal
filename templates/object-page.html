@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap-5.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/style/object.css">
+	<title>TEST</title>
+</head>
+<body>
+   <div class="container-fluid row mt-3">
+      <div class="col-2 text-center">
+         <img src="/static/icons/logo1.png">
+      </div>
+      <div class="col-8 text-center">
+         <h3 class="fw-bold">Объект {{obj}}</h3>
+      </div>
+      <div class="col-2 text-center">
+         <img src="/static/icons/logo2.png">
+      </div>
+   </div>
+   <div class="main-wrapper mx-5 mt-5">
+      <div class="main px-5">
+      	<div class="row">
+      		<div class="col d-flex flex-column justify-content-around">
+               <div class="test mb-5"></div>
+               <div class="test mt-5"></div>
+            </div>
+      		<div class="col d-flex flex-column justify-content-center">
+               <div class="test"></div>
+            </div>
+      		<div class="col d-flex flex-column justify-content-around">
+               <div class="test mb-5"></div>
+               <div class="test mt-5"></div>
+            </div>
+      	</div>
+         <div class="d-flex justify-content-end mb-5">
+            <a href="/sp/{{sp}}" class="btn btn-success"><=</a>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="/static/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
