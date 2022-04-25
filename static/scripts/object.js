@@ -47,4 +47,6 @@ function closeDocument() {
 	let doc_window = document.getElementById('document-wrapper');
 	doc_window.classList.add('d-none');
 	content.classList.remove('d-none');
+	let pdf_viewer = document.getElementById('pdf-viewer');
+	pdf_viewer.innerHTML = '';
 }

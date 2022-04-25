@@ -36,5 +36,11 @@ def object(sector, sp_number, obj_number):
 	data = sp_data.objects[int(obj_number)-1]
 	return render_template('object-page.html', sector = sector, sp = sp_number, object = data)
 
+
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+    db_session.remove()
+
+
 if __name__ == '__main__':
 	app.run(host = '0.0.0.0', port=5678, debug = True)
