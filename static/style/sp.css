@@ -1,12 +1,16 @@
 .object-card {
 	border-radius: 10px;
-	border: 2px solid #114499;
+	border: 3px solid #114499;
 	max-width: 200px;
 	position: relative;
   	text-align: center;
 	color: white;
 	padding: 0px;
 	margin: .5rem;
+}
+
+.object-card:hover {
+	border-color: red;
 }
 
 .object-card img {
@@ -41,9 +45,11 @@
  
 
 
-#data-table *{
+#data-table td{
 	padding: 0 !important;
-	
+	line-height: 1.2em;
+	font-size: 14px;
+	font-weight: 600;
 }
 
 #data-table {
@@ -52,19 +58,31 @@
 
 .table-holder {
 	margin-top: .5rem;
+	height: auto;
 	border: 3px solid #114499 !important;
 	border-radius: 10px !important;
 	background-color: white;
 }
 
 .main-wrapper {
-	background-position: center;
-	background-color: rgba(255, 255, 255, 0.5);
+	margin-left: 5%;
 	background-image: url("/static/images/map.svg");
+	background-size: 80%;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-position: 50% 100%;
 	background-attachment: fixed;
-	margin-left: 7%;
+}
+
+#th-index {
+	width: 20px;
+}
+
+#th-name {
+	width: 100px;
+}
+
+#th-square {
+	width: 100px;
 }
 
 .main {

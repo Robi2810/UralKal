@@ -5,51 +5,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/static/bootstrap-5.0.2/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="/static/style/map.css">
-	<title>Test</title>
+   <link rel="stylesheet" type="text/css" href="/static/style/style.css">
+	<title>Уралкалий</title>
 
 </head>
 <body>
-{% for sector in sectors %}
+{% for area in areas %}
    <div id="sp-card-{{loop.index}}" class="sp-card d-none p-2">
       <div id="sp-card-{{loop.index}}-content" class="sp-card-body">
-         <div class="row mx-3">
-            <div class="col text-center">
-               <div class="sp-image">
-                  <h4>Структурное подразделение 1</h4>
-                  <a href="/sector/{{loop.index}}/sp/1">
-                     <img src="static/images/{{sector['sp'][0]}}" class="img-fluid rounded-3" alt="">
-                  </a>
-               </div>
-               <div class="sp-image">
-                  <h4>Структурное подразделение 3</h4>
-                  <a href="/sector/{{loop.index}}/sp/3">
-                     <img src="static/images/{{sector['sp'][2]}}" class="img-fluid rounded-3" alt="">
-                  </a>
-               </div>
+         <div id="city" class="d-flex justify-content-start mx-3 my-3">
+            <div class="">
+               <img src="/static/images/{{area.base_url}}/city.png" class="img-fluid rounded-3">
             </div>
-            <div class="col d-flex flex-column justify-content-center text-center">
-               <div class="sp-image">
-                  <h4>{{sector['name']}}</h4>
-                  <img src="static/images/{{sector['city']}}" class="img-fluid rounded-3" alt="">
-               </div>
-            </div>
-            <div class="col text-center">
-               <div class="sp-image">
-                  <h4>Структурное подразделение 2</h4>
-                  <a href="/sector/{{loop.index}}/sp/2">
-                     <img src="static/images/{{sector['sp'][1]}}" class="img-fluid rounded-3" alt="">
-                  </a>
-               </div>
-               <div class="sp-image">
-                  <h4>Структурное подразделение 4</h4>
-                  <a href="/sector/{{loop.index}}/sp/4">
-                     <img src="static/images/{{sector['sp'][3]}}" class="img-fluid rounded-3" alt="">
-                  </a>
-               </div>
+            <div class="d-flex align-items-center">
+               <h4>{{area.city}}</h4>
             </div>
          </div>
+         <div class="row mx-3 row-cols-4 align-items-end">
+         {% for sp in area.sp %}
+            <div class="col mt-2 mb-0 sp-image text-center">
+               <h6>{{sp.name}}</h6>
+               <a href="/sector/{{area.id}}/sp/{{loop.index}}">
+                  <img src="static/images/{{area.base_url}}/sp-{{loop.index}}.png" class="img-fluid rounded-3" alt="">
+               </a>
+            </div>
+         {% endfor %}
+         </div>
       </div>
-      <div class="d-flex justify-content-end me-3 mb-2 mt-auto">
+      <div class="d-flex justify-content-end me-3 pt-2 mb-2 mt-auto">
          <button class="btn" onclick="closeSpCards()">
             <img class="w-75" src="/static/icons/arrow_back.svg">
          </button>

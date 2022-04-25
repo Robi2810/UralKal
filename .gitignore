@@ -1,5 +1,6 @@
 build/*
 lib/*
+__pycache__/*
 setup.py
 server.exe
 *.dll
