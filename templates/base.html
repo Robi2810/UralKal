@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap-5.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/style/style.css">
+	{% block style %}{% endblock %}
+</head>
+<body>
+	<div id="header-row" class="row">
+		<div class="col-2 ps-0 text-start">
+			<img class="img-fluid" src="/static/icons/logo1.svg">
+		</div>
+		<div class="col-8 text-center">
+			<h2>{% block header %}Автоматизированная геоинформационная система <br> ESG мониторинга ПАО «Уралкалий»{% endblock %}</h2>
+		</div>
+		<div class="col-2 pe-0 text-end">
+			<img class="img-fluid" src="/static/icons/logo2.svg">
+		</div>
+	</div>
+	{% block content %}
+	{% endblock %}
+	<script type="text/javascript" src="/static/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+	{% block scripts %}
+	{% endblock %}
+</body>
+</html>

@@ -36,7 +36,7 @@ function openAnalyticsImage(index) {
 	close_btn.onclick = () => { closeAnalyticsImage(); };
 	let img_inner = document.createElement('img');
 	let txt_inner = document.createElement('h2');
-	txt_inner.innerHTML = `Аналитика ${index} <br> Еще строчка`;
+	txt_inner.innerHTML = `Аналитика ${index} <br>`;
 	img_inner.setAttribute('src', `static/images/Analytics/${index}.png`);
 	img_inner.classList.add('img-fluid');
 	img_inner.classList.add('mt-5');

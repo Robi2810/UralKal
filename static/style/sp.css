@@ -1,7 +1,7 @@
 .object-card {
 	border-radius: 10px;
 	border: 3px solid #114499;
-	max-width: 200px;
+	max-width: 50px;
 	position: relative;
   	text-align: center;
 	color: white;
@@ -24,7 +24,7 @@
 }
 
 .centered-text {
-	font-size: 3rem;
+	font-size: 170%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -38,8 +38,8 @@
 
 @media screen and (min-width: 1700px) {
 	.row-7-el > .element  {
-	    flex: 0 1 calc(100%/7);
-	    max-width: calc(100%/7);
+	    flex: 0 1 calc(100%/12);
+	    max-width: calc(100%/12);
 	}
 }
  
@@ -58,10 +58,16 @@
 
 .table-holder {
 	margin-top: .5rem;
-	height: auto;
+	height: 80vh;
 	border: 3px solid #114499 !important;
 	border-radius: 10px !important;
 	background-color: white;
+	padding: 10px 10px 10px 0px;
+}
+
+.table-holder > div {
+	overflow-y: scroll;
+	height: 100%;
 }
 
 .main-wrapper {
@@ -87,5 +93,5 @@
 
 .main {
 	background-color: rgba(255, 255, 255, 0.6);
-	height: 100%;
+	
 }

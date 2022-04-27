@@ -30,6 +30,11 @@
 	background-color: white;
 }
 
+.object-card img {
+	width: 100%;
+	height: 100%;
+}
+
 .document-card img {
 	max-width: 100%;
 	max-height: 100%;
@@ -71,7 +76,6 @@
     z-index: 999;
     background-color: white;
     box-sizing: border-box;
-    overflow-y: scroll;
 }
 
 #document-wrapper button {
@@ -84,4 +88,10 @@
 	height: 88%;
 	width: 100%;
 	border: 1px solid #114499;
+}
+
+#pdf-viewer {
+	overflow-y: scroll;
+	overflow: scroll;
+	height: 88%;
 }

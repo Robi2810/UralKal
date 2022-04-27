@@ -23,7 +23,7 @@ def sp(sector, sp_number):
 		abort(404)
 	data = area.sp[int(sp_number)-1]
 	base_url = area.base_url
-	return render_template('sp-page.html', sp_data = data, sector = sector, sp_number = sp_number, base_url = base_url)
+	return render_template('sp-page.html', sp_data = data, sector = sector, sp_number = sp_number, base_url = base_url, city = area.city)
 
 @app.route("/sector/<sector>/sp/<sp_number>/object/<obj_number>", methods = ['GET'])
 def object(sector, sp_number, obj_number):
@@ -33,8 +33,17 @@ def object(sector, sp_number, obj_number):
 	if int(sp_number)-1 < 0 or int(sp_number)-1 >= len(area.sp):
 		abort(404)
 	sp_data = area.sp[int(sp_number)-1]
+	if int(obj_number)-1 < 0 or int(obj_number)-1 >= len(sp_data.objects):
+		abort(404)
 	data = sp_data.objects[int(obj_number)-1]
-	return render_template('object-page.html', sector = sector, sp = sp_number, object = data)
+	if len(data.docs) == 0:
+		abort(404)
+	base_url = area.base_url
+	return render_template('object-page.html', sector = sector, sp = sp_number, object = data, base_url = base_url)
+
+@app.errorhandler(404)
+def not_found(e):
+	return render_template('error-page.html')
 
 
 @app.teardown_appcontext

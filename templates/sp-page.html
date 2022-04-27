@@ -1,44 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/static/bootstrap-5.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/static/style/sp.css">
-   <link rel="stylesheet" type="text/css" href="/static/style/style.css">
-	<title>{{sp_data.name}}</title>
-</head>
-<body>
-   <div id="header-row" class="row">
-      <div class="col-2 ps-0 text-start">
-         <img class="img-fluid" src="/static/icons/logo1.svg">
-      </div>
-      <div class="col-8 text-center">
-         <h2>{{sp_data.name}}</h2>
-      </div>
-      <div class="col-2 pe-0 text-end">
-         <img class="img-fluid" src="/static/icons/logo2.svg">
-      </div>
-   </div>
-   <div class="main-wrapper">
-      <div class="main">
-         <div class="row w-100 py-5">
-            <div class="col-6 col-md-8">
-               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 row-7-el">
-               {% for object in sp_data.objects %}
-                  <div class="element">
-                     <div class="object-card">
-                        <a href="/sector/{{sector}}/sp/{{sp_number}}/object/{{loop.index}}">
-                           <img class="img-fluid" src="/static/images/{{base_url}}/sp-{{sp_number}}/1.png">
-                           <div class="centered-text fw">{{loop.index}}</div>
-                        </a>
-                     </div>
+{% extends "base.html" %}
+{% block title %}{{sp_data.name}}{% endblock %}
+{% block style %}
+   <link rel="stylesheet" type="text/css" href="/static/style/sp.css">
+{% endblock %}
+{% block header %}{{city}}<br>{{sp_data.name}}{% endblock %}
+{% block content %}
+<div class="main-wrapper">
+   <div class="main">
+      <div class="row w-100 pt-5">
+         <div class="col-6 col-md-8">
+            <div class="row row-cols-3  justify-content-center align-content-center" style="height: 100%;">
+            {% for object in sp_data.objects %}
+                  <div class="object-card col">
+                     <a href="/sector/{{sector}}/sp/{{sp_number}}/object/{{loop.index}}">
+                        <img class="img-fluid" src="/static/images/obj.png">
+                        <div class="centered-text fw">{{loop.index}}</div>
+                     </a>
                   </div>
-               {% endfor %}
-               </div>
+             
+            {% endfor %}
             </div>
-            <div class="col-5 col-md-3">
-               <div class="table-holder w-100 text-center ms-2">
+         </div>
+         <div class="col-5 col-md-3">
+            <div class="table-holder w-100 text-center ms-2">
+               <div>
                   <table id="data-table" class="table table-borderless" >
                      <thead>
                         <th id="th-index" scope="col"></th>
@@ -48,25 +33,25 @@
                      <tbody>
                      {% for object in sp_data.objects %}
                         <tr>
-                           <td class="text-center" scope="row">{{loop.index}}</th>
+                           <td class="text-center" scope="row">{{loop.index}}</td>
                            <td class="text-start ms-1">{{object.name}}</td>
                            <td class="">{{object.square}}</td>
                         </tr>
                      {% endfor %}
                      </tbody>
-                  </table>    
-               </div>
+                  </table>
+               </div>   
             </div>
-            <div class="col-1 d-flex flex-column justify-content-end">
-               <a class="btn" href="/?block={{sector}}">
-                  <img class="img-fluid" src="/static/icons/arrow_back.svg">
-               </a>
-            </div>
-            
          </div>
+         <div class="col-1 d-flex flex-column justify-content-end">
+            <a class="btn" href="/?block={{sector}}">
+               <img class="img-fluid" src="/static/icons/arrow_back.svg">
+            </a>
+         </div>
+      </div>
    </div>
-   </div>
-   
+</div>
+{% endblock %}
+{% block scripts %}
    <script type="text/javascript" src="/static/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% endblock %}

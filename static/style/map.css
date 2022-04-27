@@ -17,12 +17,40 @@
 .sp-card {
 	position: absolute;
 	top: 15%;
-	right: 3%;
-	border: 3px solid red;
-	border-radius: 10px;
-	background-color: rgba(255, 255, 255, 0.7);
+	right: 7%;
 	width: 60%;
 	z-index: 900;
+}
+
+.close-sp-btn-div {
+	position: absolute;
+	bottom: 2%;
+	right: -95px;
+	z-index: 900;
+}
+
+.close-sp-btn-div img {
+	width: 100%;
+}
+
+@media screen and (max-width: 1366px) {
+	.close-sp-btn-div {
+		position: absolute;
+		bottom: 2%;
+		right: -85px;
+		z-index: 900;
+	}
+
+	.close-sp-btn-div img {
+		width: 80%;
+	}
+}
+
+.sp-card-body {
+	border: 3px solid red;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 1);
+	padding-bottom: 1.5rem;
 }
 
 #analytics-button {
@@ -30,7 +58,7 @@
 	left: 60px;
 	top: 188px;
 	width: 22%;
-	height: 22%;
+	height: auto;
 	padding: 1px;
 }
 
