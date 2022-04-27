@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}{{object.name}}{% endblock %}
+{% block style %}
+   <link rel="stylesheet" type="text/css" href="/static/style/object.css">
+{% endblock %}
+{% block header %}{{area_name}}<br>СП {{sp_name}} объект {{obj_number}}{% endblock %}
+{% block content %}
+<div id="document-wrapper" class="d-none">
+   <div id="document" class="px-2 pb-1 text-center">
+      <h2 id="document-title"></h2>
+      <div id="pdf-viewer">
+         
+      </div>
+   </div>
+   <button id="close-document" class="btn" onclick="closeDocument()">
+      <img class="w-100" src="/static/icons/arrow_back.svg">
+   </button>
+</div>
+<div class="main-wrapper">
+   <div class="main">
+      <div id="content" class="">
+         <div class="row w-100 mt-4">
+            <div class="col d-flex flex-column justify-content-around">
+               <div class="document-card mb-5 d-flex flex-column justify-content-around">
+                  <h5>Технические характеристики</h5>
+                  <h5 class="mx-4">Нет документа</h5>
+                  <img class="img-fluid m-1" src="/static/images/doc_preview.png">
+               </div>
+               <div class="document-card mb-5 d-flex flex-column justify-content-around">
+                  <h5>Спецификация потребилетей дизтоплива</h5>
+                  <h5 class="mx-4">Нет документа</h5>
+                  <img class="img-fluid m-1" src="/static/images/doc_preview.png">
+               </div>
+            </div>
+            <div class="col d-flex flex-column justify-content-center">
+               <h5 class="text-center">{{object.name}}</h5>
+               <div class="object-card">
+                  
+                  <img class="img-fluid" src="/static/images/obj.png">
+               </div>
+            </div>
+            <div class="col d-flex flex-column justify-content-around">
+               <div class="document-card mb-5 d-flex flex-column justify-content-around">
+                  <h5>Спецификация потребителей электронергии</h5>
+                  <h5 class="mx-4">Нет документа</h5>
+                  <img class="img-fluid m-1" src="/static/images/doc_preview.png">
+               </div>
+               <div class="document-card mb-5 d-flex flex-column justify-content-around">
+                  <h5>Спецификация потребителей тепловой энергии</h5>
+                  <h5 class="mx-4">Нет документа</h5>
+                  <img class="img-fluid m-1" src="/static/images/doc_preview.png">
+               </div>
+            </div>
+         </div>
+         <div class="d-flex justify-content-end mb-5">
+            <a class="btn" href="/sector/{{sector}}/sp/{{sp}}">
+               <img class="w-100" src="/static/icons/arrow_back.svg">
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+{% block scripts %}
+   <script type="text/javascript" src="/static/scripts/pdf.js"></script>
+   <script type="text/javascript" src="/static/scripts/object.js"></script>
+{% endblock %}

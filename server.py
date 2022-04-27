@@ -36,10 +36,19 @@ def object(sector, sp_number, obj_number):
 	if int(obj_number)-1 < 0 or int(obj_number)-1 >= len(sp_data.objects):
 		abort(404)
 	data = sp_data.objects[int(obj_number)-1]
-	if len(data.docs) == 0:
-		abort(404)
 	base_url = area.base_url
-	return render_template('object-page.html', sector = sector, sp = sp_number, object = data, base_url = base_url)
+	render_name = 'object-page.html'
+	if len(data.docs) == 0:
+		render_name = 'no-object-page.html'
+	return render_template(
+			render_name,
+			sector = sector,
+			sp = sp_number,
+			object = data,
+			obj_number = obj_number,
+			area_name = area.name,
+			sp_name = sp_data.name,
+			base_url = base_url)
 
 @app.errorhandler(404)
 def not_found(e):
