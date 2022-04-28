@@ -20,33 +20,33 @@
    <div class="main">
       <div id="content" class="">
          <div class="row w-100 mt-4">
-            <div class="col d-flex flex-column justify-content-around">
-               <div class="document-card mb-5 d-flex flex-column justify-content-around" onclick="openDocument(`{{object.docs[0].name}}`, `{{object.docs[0].path}}`)">
-                  <h5>Технические характеристики</h5>
-                  <h5 class="mx-4">{{object.docs[0].name}}</h5>
+            <div class="col d-flex flex-column justify-content-between">
+               <div class="document-card d-flex flex-column justify-content-around" onclick="openDocument(`{{object.name}}`, `{{object.docs[0].path}}`)">
+                  <h6 class="mt-1">Технические характеристики</h6>
+                  <h6 class="mx-4">{{object.name}}</h6>
                   <img class="img-fluid m-1" src="/static/images/doc_preview.png">
                </div>
-               <div class="document-card mb-5 d-flex flex-column justify-content-around" onclick="openDocument(`{{object.docs[1].name}}`, `{{object.docs[1].path}}`)">
-                  <h5>Спецификация потребилетей дизтоплива</h5>
-                  <h5 class="mx-4">{{object.docs[1].name}}</h5>
+               <div class="document-card d-flex flex-column justify-content-around" onclick="openDocument(`{{object.name}}`, `{{object.docs[1].path}}`)">
+                  <h6 class="mt-1">Спецификация потребилетей дизтоплива</h6>
+                  <h6 class="mx-4">{{object.name}}</h6>
                   <img class="img-fluid m-1" src="/static/images/doc_preview.png">
                </div>
             </div>
             <div class="col d-flex flex-column justify-content-center">
-               <h5 class="text-center">{{object.name}}</h5>
+               <h5 class="text-center px-1">{{object.name}}</h5>
                <div class="object-card">
                   <img class="img-fluid" src="/static/images/{{base_url}}/sp-{{sp}}/{{obj_number}}.png">
                </div>
             </div>
-            <div class="col d-flex flex-column justify-content-around">
-               <div class="document-card mb-5 d-flex flex-column justify-content-around" onclick="openDocument(`{{object.docs[2].name}}`, `{{object.docs[2].path}}`)">
-                  <h5>Спецификация потребителей электронергии</h5>
-                  <h5 class="mx-4">{{object.docs[2].name}}</h5>
+            <div class="col d-flex flex-column justify-content-between">
+               <div class="document-card d-flex flex-column justify-content-around" onclick="openDocument(`{{object.name}}`, `{{object.docs[2].path}}`)">
+                  <h6 class="mt-1">Спецификация потребителей электронергии</h6>
+                  <h6 class="mx-4">{{object.name}}</h6>
                   <img class="img-fluid m-1" src="/static/images/doc_preview.png">
                </div>
-               <div class="document-card mb-5 d-flex flex-column justify-content-around" onclick="openDocument(`{{object.docs[3].name}}`, `{{object.docs[3].path}}`)">
-                  <h5>Спецификация потребителей тепловой энергии</h5>
-                  <h5 class="mx-4">{{object.docs[3].name}}</h5>
+               <div class="document-card d-flex flex-column justify-content-around" onclick="openDocument(`{{object.name}}`, `{{object.docs[3].path}}`)">
+                  <h6 class="mt-1">Спецификация потребителей тепловой энергии</h6>
+                  <h6 class="mx-4">{{object.name}}</h6>
                   <img class="img-fluid m-1" src="/static/images/doc_preview.png">
                </div>
             </div>

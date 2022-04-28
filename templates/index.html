@@ -15,7 +15,11 @@
                <h4>{{area.city}}</h4>
             </div>
          </div>
-         <div class="row mx-3 row-cols-4 align-items-end justify-content-between">
+         {% if loop.index == 1 %}
+            <div class="row mx-3 mb-3 row-cols-5 align-items-end justify-content-start">
+         {% else %}
+            <div class="row mx-3 mb-3 row-cols-4 align-items-end justify-content-between">
+         {% endif %}
          {% for sp in area.sp %}
             {% if area.sp | length == 1 %}
                <div class="w-100 mt-2 mb-0 text-center">
