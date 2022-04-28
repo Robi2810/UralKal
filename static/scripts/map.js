@@ -1,7 +1,15 @@
 function closeSpCards() {
 	let cards = document.getElementsByClassName('sp-card');
+	let popups = document.getElementsByClassName('popups');
+	let circles = document.getElementsByClassName('area-hover');
 	for (let card of cards) {
 		card.classList.add('d-none')
+	}
+	for (let pop of popups) {
+		pop.setAttribute('style', 'display:none;')
+	}
+	for (let circle of circles) {
+		circle.setAttribute('style', 'display:inline;')
 	}
 }
 
@@ -9,6 +17,14 @@ function openSpCard(index) {
 	closeSpCards();
 	let card = document.getElementById(`sp-card-${index}`);
 	let card_body = document.getElementById(`sp-card-${index}-title`);
+	let circle = document.getElementById(`circle${index}`);
+	let l1 = document.getElementById(`c${index}l1`);
+	let l2 = document.getElementById(`c${index}l2`);
+	let popup = document.getElementById(`popup${index}`);
+	popup.setAttribute('style', 'display:inline;');
+	circle.setAttribute('style', 'display:none;')
+	l1.setAttribute('style', 'display:none;')
+	l2.setAttribute('style', 'display:none;')
 	card.classList.remove('d-none');
 }
 
@@ -57,10 +73,10 @@ function closeAnalyticsImage() {
 }
 
 
-let sector1 = document.getElementById('circle14');
-let sector2 = document.getElementById('circle20');
-let sector3 = document.getElementById('circle2');
-let sector4 = document.getElementById('circle8');
+let sector1 = document.getElementById('circle1');
+let sector2 = document.getElementById('circle2');
+let sector3 = document.getElementById('circle3');
+let sector4 = document.getElementById('circle4');
 
 
 sector1.onclick = () => { openSpCard(1); };

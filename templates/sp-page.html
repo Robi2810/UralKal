@@ -9,15 +9,18 @@
    <div class="main">
       <div class="row w-100 pt-5">
          <div class="col-6 col-md-8">
-            <div class="row row-cols-3  justify-content-center align-content-center" style="height: 100%;">
+         {% if sp_data.objects | length < 6 %}
+            <div class="row justify-content-center align-content-center" style="height: 100%; margin: 0 17vw 0 17vw">
+         {% else %}
+            <div class="row justify-content-start align-content-center" style="height: 100%; margin: 0 17vw 0 17vw">
+         {% endif %}
             {% for object in sp_data.objects %}
-                  <div class="object-card col">
-                     <a href="/sector/{{sector}}/sp/{{sp_number}}/object/{{loop.index}}">
-                        <img class="img-fluid" src="/static/images/obj.png">
-                        <div class="centered-text fw">{{loop.index}}</div>
-                     </a>
-                  </div>
-             
+               <div class="object-card">
+                  <a href="/sector/{{sector}}/sp/{{sp_number}}/object/{{loop.index}}">
+                     <img class="img-fluid" src="/static/images/{{base_url}}/sp-{{sp_number}}/{{loop.index}}.png">
+                     <div class="centered-text fw">{{loop.index}}</div>
+                  </a>
+               </div>
             {% endfor %}
             </div>
          </div>
