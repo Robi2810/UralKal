@@ -7,7 +7,7 @@
 	margin: .5rem;
 }
 
-.object-card:hover {
+.object-card img:hover {
 	border-color: red;
 }
 
