@@ -38,8 +38,6 @@ def object(sector, sp_number, obj_number):
 	data = sp_data.objects[int(obj_number)-1]
 	base_url = area.base_url
 	render_name = 'object-page.html'
-	if len(data.docs) == 0:
-		render_name = 'no-object-page.html'
 	tech = None
 	disel = None
 	electro = None

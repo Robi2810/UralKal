@@ -36,19 +36,20 @@ function renderPage(page, i) {
 }
 
 
-function openDocument(name, path) {
+function openDocument(name, path, fake = false) {
 	title.innerText = name;
 	doc_window.classList.remove('d-none');
 	content.classList.add('d-none');
-	var loadingTask = pdfjsLib.getDocument(`/static/files/${path}`);
-	
-	loadingTask.promise.then(function(pdf) {
-		for (var i = 1; i <= pdf.numPages; i++) {
-			pdf.getPage(i).then(function(page) {
-				renderPage(page, 1);
-			});
-		}
-	});
+	if (!fake) {
+		var loadingTask = pdfjsLib.getDocument(`/static/files/${path}`);
+		loadingTask.promise.then(function(pdf) {
+			for (var i = 1; i <= pdf.numPages; i++) {
+				pdf.getPage(i).then(function(page) {
+					renderPage(page, 1);
+				});
+			}
+		});
+	}
 }
 
 

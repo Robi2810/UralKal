@@ -4,17 +4,15 @@ import random
 
 
 documents = [
-	Document("Документ 1", "doc1.pdf"),
-	Document("Документ 2", "doc2.pdf"),
-	Document("Документ 3", "doc3.pdf"),
-	Document("Документ 4", "doc4.pdf"),
+	Document("EL", "doc3.pdf"),
+	Document("HT", "doc4.pdf"),
 ]
 
 areas = [
-	Area("ПП 1\nСоликамск", "Solikamsk", "Соликамск"),
-	Area("ПП 2\nБерезники", "Berezniki", "Березники"),
-	Area("ПП 3\nПермь", "Perm", "Пермь"),
-	Area("ПП 4\nСанкт-Петербург", "Piter", "Санкт-Петербург")
+	Area("ПП1\nСоликамск", "Solikamsk", "Соликамск"),
+	Area("ПП2\nБерезники", "Berezniki", "Березники"),
+	Area("ПП3\nПермь", "Perm", "Пермь"),
+	Area("ПП4\nСанкт-Петербург", "Piter", "Санкт-Петербург")
 ]
 
 sps = [
