@@ -4,10 +4,10 @@ import random
 
 
 documents = [
-	Document("Технические характеристики", "doc1.pdf"),
-	Document("Спецификация потребителей электронергии", "doc2.pdf"),
-	Document("Спецификация потребилетей дизтоплива", "doc3.pdf"),
-	Document("Спецификация потребителей тепловой энергии", "doc4.pdf"),
+	Document("Документ 1", "doc1.pdf"),
+	Document("Документ 2", "doc2.pdf"),
+	Document("Документ 3", "doc3.pdf"),
+	Document("Документ 4", "doc4.pdf"),
 ]
 
 areas = [
