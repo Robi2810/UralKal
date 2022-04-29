@@ -29,8 +29,8 @@
             {% for object in sp_data.objects %}
                <div class="object-card">
                   <a href="/sector/{{sector}}/sp/{{sp_number}}/object/{{loop.index}}">
-                     <img class="img-fluid" src="/static/images/{{base_url}}/sp-{{sp_number}}/{{loop.index}}.png">
                      <div class="centered-text fw">{{loop.index}}</div>
+                     <img class="img-fluid" src="/static/images/{{base_url}}/sp-{{sp_number}}/{{loop.index}}.png">             
                   </a>
                </div>
             {% endfor %}
