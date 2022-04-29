@@ -3,16 +3,28 @@
 {% block style %}
    <link rel="stylesheet" type="text/css" href="/static/style/sp.css">
 {% endblock %}
-{% block header %}{{city}}<br>{{sp_data.name}}{% endblock %}
+{% block header %}{{area_name}}<br>СТРУКРУРНОЕ ПОДРАЗДЕЛЕНИЕ {{sp_data.name}}{% endblock %}
 {% block content %}
 <div class="main-wrapper">
    <div class="main">
-      <div class="row w-100 pt-5">
-         <div class="col-6 col-md-8">
+      <div class="row w-100 pt-3">
+         <div class="col-6 col-md-8 d-flex justify-content-center">
          {% if sp_data.objects | length < 6 %}
-            <div class="row justify-content-center align-content-center" style="height: 100%; margin: 0 17vw 0 17vw">
+            <div class="row justify-content-center align-content-center" style="height: 100%">
+         {% elif sp_data.objects | length < 8 %}
+            <div class="row justify-content-start align-content-center" style="height: 100%; width: 200px">
+         {% elif sp_data.objects | length < 12 %}
+            <div class="row justify-content-start align-content-center" style="height: 100%; width: 300px;">
+         {% elif sp_data.objects | length < 20 %}
+            <div class="row justify-content-start align-content-center" style="height: 100%; width:350px;">
+         {% elif sp_data.objects | length < 50 %}
+            <div class="row justify-content-start align-content-center" style="height: 100%; width:470px;">
+         {% elif sp_data.objects | length < 100 %}
+            <div class="row justify-content-start align-content-center" style="height: 100%; width: 640px;"> 
+         {% elif sp_data.objects | length < 150 %}
+            <div class="row justify-content-start align-content-center" style="height: 100%; width: 700px;">
          {% else %}
-            <div class="row justify-content-start align-content-center" style="height: 100%; margin: 0 17vw 0 17vw">
+            <div class="row justify-content-start align-content-center" style="height: 100%;">
          {% endif %}
             {% for object in sp_data.objects %}
                <div class="object-card">

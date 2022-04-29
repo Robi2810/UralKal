@@ -3,19 +3,8 @@
 {% block style %}
    <link rel="stylesheet" type="text/css" href="/static/style/object.css">
 {% endblock %}
-{% block header %}{{area_name}}<br>СП {{sp_name}} объект {{obj_number}}{% endblock %}
+{% block header %}{{area_name}}<br>СТРУКРУРНОЕ ПОДРАЗДЕЛЕНИЕ {{sp_name}}<br>Объект {{obj_number}}{% endblock %}
 {% block content %}
-<div id="document-wrapper" class="d-none">
-   <div id="document" class="px-2 pb-1 text-center">
-      <h2 id="document-title"></h2>
-      <div id="pdf-viewer">
-         
-      </div>
-   </div>
-   <button id="close-document" class="btn" onclick="closeDocument()">
-      <img class="w-100" src="/static/icons/arrow_back.svg">
-   </button>
-</div>
 <div class="main-wrapper">
    <div class="main">
       <div id="content" class="">
@@ -51,7 +40,7 @@
                </div>
             </div>
          </div>
-         <div class="d-flex justify-content-end mb-5">
+         <div class="d-flex justify-content-end">
             <a class="btn" href="/sector/{{sector}}/sp/{{sp}}">
                <img class="w-100" src="/static/icons/arrow_back.svg">
             </a>
@@ -59,8 +48,4 @@
       </div>
    </div>
 </div>
-{% endblock %}
-{% block scripts %}
-   <script type="text/javascript" src="/static/scripts/pdf.js"></script>
-   <script type="text/javascript" src="/static/scripts/object.js"></script>
 {% endblock %}

@@ -15,6 +15,7 @@
                <h4>{{area.city}}</h4>
             </div>
          </div>
+         <h5 class="text-center">СТРУКТУРНЫЕ ПОДРАЗДЕЛЕНИЯ</h5>
          {% if loop.index == 1 %}
             <div class="row mx-3 mb-3 row-cols-5 align-items-end justify-content-start">
          {% else %}
@@ -22,7 +23,7 @@
          {% endif %}
          {% for sp in area.sp %}
             {% if area.sp | length == 1 %}
-               <div class="w-100 mt-2 mb-0 text-center">
+               <div class="w-100 mt-2 px-5 mb-0 text-center">
             {% else %}
                <div class="col mt-2 mb-0 sp-image text-center">
             {% endif %}

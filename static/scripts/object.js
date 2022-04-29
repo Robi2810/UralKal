@@ -12,16 +12,16 @@ function renderPage(page, i) {
 	canvas.setAttribute('id', canvasId);
 	viewer.appendChild(canvas);
 		//var canvas = document.getElementById(canvasId);
-	var scale = 1.5;
-	var viewport = page.getViewport({ scale: scale, });
+	var scale = window.devicePixelRatio;
+	canvas.width = viewer.clientWidth;
+	var viewport = page.getViewport({scale: canvas.width / page.getViewport({scale: scale}).width});
 	// Support HiDPI-screens.
 	var outputScale = window.devicePixelRatio || 1;
 	var context = canvas.getContext('2d');
 
-	canvas.width = Math.floor(viewport.width * outputScale);
-	canvas.height = Math.floor(viewport.height * outputScale);
-	canvas.style.height =  Math.floor(viewport.height) + "px";
-	canvas.style.width = Math.floor(viewport.width) + "px";
+	canvas.height = viewer.clientHeight;
+	canvas.style.height =  Math.floor(viewer.clientHeight) + "px";
+	canvas.style.width = viewer.clientWidth;
 
 	var transform = outputScale !== 1
 	  ? [outputScale, 0, 0, outputScale, 0, 0]
