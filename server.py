@@ -40,6 +40,19 @@ def object(sector, sp_number, obj_number):
 	render_name = 'object-page.html'
 	if len(data.docs) == 0:
 		render_name = 'no-object-page.html'
+	tech = None
+	disel = None
+	electro = None
+	heat = None
+	for doc in data.docs:
+		if (doc.name == "TX"):
+			tech = doc
+		elif doc.name == "HT":
+			heat = doc
+		elif doc.name == "EL":
+			electro = doc
+		elif doc.name == "DIS":
+			disel = doc
 	return render_template(
 			render_name,
 			sector = sector,
@@ -48,6 +61,10 @@ def object(sector, sp_number, obj_number):
 			obj_number = obj_number,
 			area_name = area.name,
 			sp_name = sp_data.name,
+			tech = tech,
+			disel = disel,
+			electro = electro,
+			heat = heat,
 			base_url = base_url)
 
 @app.errorhandler(404)

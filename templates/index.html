@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Уралкалий{% endblock %}
 {% block style %}
-   <link rel="stylesheet" type="text/css" href="/static/style/map.css">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/map.css') }}">
 {% endblock %}
 {% block content %}
 {% for area in areas %}
