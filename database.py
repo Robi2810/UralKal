@@ -3,7 +3,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import os
 
-path_to_db = 'sqlite:///test.db'
+path_to_db = 'sqlite:///data.db'
 
 engine = create_engine(path_to_db, convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,

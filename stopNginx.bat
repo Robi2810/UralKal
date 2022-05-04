@@ -1,0 +1,1 @@
+start /D nginx-1.20.2 nginx -s quit

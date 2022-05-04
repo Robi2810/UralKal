@@ -248,3 +248,20 @@
 2022/04/30 02:16:29 [error] 16664#13564: *369 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /sector/1/sp/1 HTTP/1.1", upstream: "http://[::1]:5678/sector/1/sp/1", host: "localhost", referrer: "http://localhost/?block=1"
 2022/04/30 02:16:37 [error] 16664#13564: *369 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /sector/2/sp/7/object/62 HTTP/1.1", upstream: "http://[::1]:5678/sector/2/sp/7/object/62", host: "localhost", referrer: "http://localhost/sector/2/sp/7"
 2022/04/30 02:19:27 [notice] 9372#17932: signal process started
+2022/04/30 15:53:47 [notice] 20820#11888: signal process started
+2022/04/30 15:57:16 [notice] 24396#12060: signal process started
+2022/04/30 16:10:09 [notice] 12664#15772: signal process started
+2022/04/30 16:10:11 [notice] 3676#9176: signal process started
+2022/04/30 16:10:11 [error] 3676#9176: CreateFile() "C:\Users\cretix\Documents\dev\web\UralKal\nginx-1.20.2/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/04/30 16:10:14 [notice] 13852#22752: signal process started
+2022/04/30 16:10:14 [error] 13852#22752: CreateFile() "C:\Users\cretix\Documents\dev\web\UralKal\nginx-1.20.2/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2022/04/30 16:14:02 [notice] 8344#8912: signal process started
+2022/04/30 16:14:02 [error] 8344#8912: invalid PID number "" in "C:\Users\cretix\Documents\dev\web\UralKal\nginx-1.20.2/logs/nginx.pid"
+2022/05/01 15:44:46 [notice] 20088#24996: signal process started
+2022/05/01 15:45:31 [error] 25408#13748: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5678/", host: "localhost"
+2022/05/01 15:48:05 [notice] 1708#24020: signal process started
+2022/05/01 15:49:04 [notice] 16304#4432: signal process started
+2022/05/02 23:40:43 [notice] 16504#23928: signal process started
+2022/05/02 23:46:29 [error] 8524#4332: *33 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /sector/2/sp/9 HTTP/1.1", upstream: "http://127.0.0.1:5678/sector/2/sp/9", host: "localhost", referrer: "http://localhost/?block=1"
+2022/05/02 23:58:59 [error] 8524#4332: *56 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /?block=2 HTTP/1.1", upstream: "http://127.0.0.1:5678/?block=2", host: "localhost", referrer: "http://localhost/sector/2/sp/9"
+2022/05/03 00:43:34 [notice] 23796#16044: signal process started
